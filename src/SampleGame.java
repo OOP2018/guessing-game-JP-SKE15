@@ -36,8 +36,7 @@ public class SampleGame extends NumberGame {
 	/**
 	 * Evaluate a user's guess.
 	 * 
-	 * @param number
-	 *            is the user's guess
+	 * @param number is the user's guess
 	 * @return true if guess is correct, false otherwise
 	 */
 	public boolean guess(int number) {

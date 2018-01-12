@@ -5,7 +5,7 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 100;
+		int upperBound = 500;
 		NumberGame game = new HayatoGame(upperBound);
 		GameConsole ui = new GameConsole();
 		int solution = ui.play(game);
