@@ -16,20 +16,16 @@ public class GameSolver {
 	 * @return the correct answer
 	 */
 	public int play(NumberGame game) {
-
-		// describe the game
-		System.out.println(game.toString());
-
-		// This is just an example.
-		System.out.println(game.getMessage());
 		boolean correct;
 		int guess;
 		Random rand = new Random();
 		do {
-			System.out.println("Your answer? ");
 			guess = rand.nextInt(100) + 1;
 			correct = game.guess(guess);
-			System.out.println(game.getMessage());
+			if (game.getCount() > game.getUpperBound()) {
+				System.out.println("I give up");
+				System.exit(0);
+			}
 		} while (correct == false);
 		return guess;
 	}

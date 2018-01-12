@@ -43,7 +43,6 @@ public class HayatoGame extends NumberGame {
 			count++;
 			return false;
 		}
-
 		else {
 			setMessage("Your answer is correct :3");
 			count++;
