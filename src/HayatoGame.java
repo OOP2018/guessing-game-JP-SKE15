@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+ * Game of guessing a secret number
+ * @author HAYATO
+ *
+ */
 public class HayatoGame extends NumberGame {
 
 	private int upperBound;
