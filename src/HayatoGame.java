@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * Game of guessing a secret number
- * @author HAYATO
+ * @author Hayato Kawai
  *
  */
 public class HayatoGame extends NumberGame {

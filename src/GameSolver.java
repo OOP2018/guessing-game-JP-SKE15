@@ -3,7 +3,7 @@ import java.util.Random;
 /**
  * Automatically find the secret to any NumberGame.
  * 
- * @author HAYATO
+ * @author Hayato Kawai
  */
 public class GameSolver {
 	/**
@@ -22,10 +22,10 @@ public class GameSolver {
 		do {
 			guess = rand.nextInt(100) + 1;
 			correct = game.guess(guess);
-			if (game.getCount() > game.getUpperBound()) {
-				System.out.println("I give up");
-				System.exit(0);
-			}
+//			if (game.getCount() > game.getUpperBound()) {
+//				System.out.println("I give up");
+//				System.exit(0);
+//			}
 		} while (correct == false);
 		return guess;
 	}
