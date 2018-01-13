@@ -1,4 +1,3 @@
-import java.util.Random;
 
 /**
  * Automatically find the secret to any NumberGame.
@@ -18,14 +17,16 @@ public class GameSolver {
 	public int play(NumberGame game) {
 		boolean correct;
 		int guess;
-		Random rand = new Random();
+		int max = game.getUpperBound();
+		int min = 1;
 		do {
-			guess = rand.nextInt(100) + 1;
+			guess = min + (max - min) / 2;
 			correct = game.guess(guess);
-//			if (game.getCount() > game.getUpperBound()) {
-//				System.out.println("I give up");
-//				System.exit(0);
-//			}
+			if (game.getMessage().equals("Your answer is too large")) {
+				max = guess - 1;
+			} else if (game.getMessage().equals("Your answer is too small")) {
+				min = guess + 1;
+			}
 		} while (correct == false);
 		return guess;
 	}

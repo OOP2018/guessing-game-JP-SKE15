@@ -2,6 +2,7 @@ import java.util.*;
 
 /**
  * Game of guessing a secret number
+ * 
  * @author Hayato Kawai
  *
  */
@@ -39,11 +40,10 @@ public class HayatoGame extends NumberGame {
 			count++;
 			return false;
 		} else if (number < secretNumber) {
-			setMessage("Your answer is to small");
+			setMessage("Your answer is too small");
 			count++;
 			return false;
-		}
-		else {
+		} else {
 			setMessage("Your answer is correct :3");
 			count++;
 			return true;
