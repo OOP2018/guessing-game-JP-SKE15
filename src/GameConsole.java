@@ -20,7 +20,7 @@ public class GameConsole {
 		boolean correct;
 		int guess;
 		do {
-			System.out.print("Your answer? ");
+			System.out.print("Your answer? : ");
 			guess = console.nextInt();
 			correct = game.guess(guess);
 			System.out.println(game.getMessage());
