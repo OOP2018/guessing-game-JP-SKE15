@@ -4,7 +4,7 @@ import java.util.Random;
 /**
  * Example guessing game.
  * 
- * @author Your Name
+ * @author Hayato Kawai
  * @version 2018.01.11
  */
 public class SampleGame extends NumberGame {

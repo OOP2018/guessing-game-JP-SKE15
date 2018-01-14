@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 /**
  * Play guessing game on the console.
+ * @author Hayato Kawai
  */
+
 public class GameConsole {
 
 	/**

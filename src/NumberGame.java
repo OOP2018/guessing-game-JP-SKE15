@@ -3,6 +3,7 @@
  * class and override the methods: guess(), toString(), getUpperBound().
  *  Your class should not override getMessage() and setMessage(), just use the methods
  * from this class.
+ * @author Hayato Kawai
  */
 public class NumberGame {
 	/** A helpful message for user. */
