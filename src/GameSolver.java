@@ -22,9 +22,10 @@ public class GameSolver {
 		do {
 			guess = min + (max - min) / 2;
 			correct = game.guess(guess);
-			if (game.getMessage().equals("Your answer is too large")) {
+			String message = game.getMessage();
+			if (message.contains("large")) {
 				max = guess - 1;
-			} else if (game.getMessage().equals("Your answer is too small")) {
+			} else if (message.contains("small")) {
 				min = guess + 1;
 			}
 		} while (correct == false);
