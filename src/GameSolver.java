@@ -28,7 +28,7 @@ public class GameSolver {
 			} else if (message.contains("small")) {
 				min = guess + 1;
 			}
-		} while (correct == false);
+		} while (!correct);
 		return guess;
 	}
 

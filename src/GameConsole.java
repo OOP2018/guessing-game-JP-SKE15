@@ -26,7 +26,7 @@ public class GameConsole {
 			guess = console.nextInt();
 			correct = game.guess(guess);
 			System.out.println(game.getMessage());
-		} while (correct == false);
+		} while (!correct);
 		return guess;
 	}
 

@@ -28,27 +28,25 @@ public class HayatoGame extends NumberGame {
 	/**
 	 * Evaluate a user's guess.
 	 * 
+	 * @param number is the player's guess
+	 *     
 	 * @return true if answer is correct and false if answer is incorrect.
 	 */
 	public boolean guess(int number) {
+		count++;
 		if (number > this.upperBound || number < 1) {
 			setMessage("Out of bound");
-			count++;
 			return false;
 		} else if (number > secretNumber) {
 			setMessage("Your answer is too large");
-			count++;
 			return false;
 		} else if (number < secretNumber) {
 			setMessage("Your answer is too small");
-			count++;
 			return false;
 		} else {
 			setMessage("Your answer is correct :3");
-			count++;
 			return true;
 		}
-
 	}
 
 	/**
