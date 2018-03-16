@@ -1,16 +1,31 @@
-/**
- * A main class for the GuessingGame. It is responsible for creating objects,
- * connecting objects, and running the game UI.
- * @author Hayato Kawai
- */
-public class Main {
+import java.net.URL;
+
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+	
+	Counter counter = new Counter();
+	@Override
+	public void start(Stage stage) {
+		try {
+			
+			Parent root = (Parent)FXMLLoader.load(getClass().getResource("GuessingGameUI.fxml"));
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.setTitle("Converter");
+			stage.sizeToScene();
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
-		// upper limit for secret number in guessing game
-		int upperBound = 123;
-		NumberGame game = new HayatoGame(upperBound);
-		GameSolver ui = new GameSolver();
-		int solution = ui.play(game);
-		System.out.println("play() returned " + solution);
-		System.out.println("you play " + game.getCount() + " round");
+		launch(args);
 	}
 }

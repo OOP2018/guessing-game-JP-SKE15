@@ -28,8 +28,9 @@ public class HayatoGame extends NumberGame {
 	/**
 	 * Evaluate a user's guess.
 	 * 
-	 * @param number is the player's guess
-	 *     
+	 * @param number
+	 *            is the player's guess
+	 * 
 	 * @return true if answer is correct and false if answer is incorrect.
 	 */
 	public boolean guess(int number) {
@@ -67,6 +68,9 @@ public class HayatoGame extends NumberGame {
 		return this.upperBound;
 	}
 
+	public int getAnswer() {
+		return this.secretNumber;
+	}
 	/**
 	 * Return the general description
 	 * 
