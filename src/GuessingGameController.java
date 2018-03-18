@@ -5,6 +5,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ *  UI controller for events and initializing components
+ * @author Hayato Kawai
+ *
+ */
 public class GuessingGameController {
 	@FXML
 	private Label label;
@@ -12,9 +17,13 @@ public class GuessingGameController {
 	private TextField textfield;
 	@FXML
 	private Button button1;
-	private CounterView1 view;
+	@FXML Label label2;
+	private CounterView view;
 	private NumberGame game;
 
+	/**
+	 * submit the answer and update the counter value.
+	 */
 	public void Submit(ActionEvent event) {
 		int answer = 0;
 		String word = textfield.getText().trim();
@@ -30,13 +39,19 @@ public class GuessingGameController {
 		view.displayCount();
 	}
 
+	/**
+	 * run the counter window
+	 */
 	@FXML
 	public void initialize() {
 		view.run();
 	}
 
+	/**
+	 * initialize game and counter view
+	 */
 	public GuessingGameController() {
 		game = new HayatoGame(100);
-		view = new CounterView1(game);
+		view = new CounterView(game);
 	}
 }

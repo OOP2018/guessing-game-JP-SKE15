@@ -12,16 +12,13 @@ import javafx.stage.Stage;
 
 /**
  * A Controller for a window that shows the value of a Counter.
- * This has only one component (but you can add more components),
- * so write it in code instead of FXML.
+ * @author Hayato Kawai
  *
  */
 public class CounterView extends Stage implements java.util.Observer {
-	/** the stage (top-level window) for showing scene */
+	
 	private Stage stage;
-	/** a counter to show value of */
 	private NumberGame counter;
-	/** the label that shows the counter value. */
 	private Label label;
 	
 	/**
@@ -35,28 +32,18 @@ public class CounterView extends Stage implements java.util.Observer {
 	
 	private void initComponents() {
 		stage = this;
-		// components and containers for our window
 		HBox root = new HBox();
-		//TODO Set some padding around the HBox
 		root.setPadding(new Insets(10));
-		//TODO Align components in center of the HBox
 		root.setAlignment(Pos.CENTER);
-		// The label that will show the counter value.
 		label = new Label("   ");
-		// make the label big enough
 		label.setPrefWidth(144);
-		//TODO Make the text BIG. Use setFont to create a font.
-		//TODO Be careful to import the correct Font class (not java.awt.Font).
 		label.setFont(new Font("Arial", 80.0));
-		//TODO Set the text alignment to CENTER
 		label.setAlignment(Pos.CENTER);
-		// Add the label to the HBox.  You can all more components, too.
 		root.getChildren().add(label);
-		// Create a Scene using HBox as the root element
 		Scene scene = new Scene(root);
-		// show the scene on the stage
 		stage.setScene(scene);
 		stage.setTitle("Count");
+		stage.setResizable(false);
 		stage.sizeToScene();
 	}
 	

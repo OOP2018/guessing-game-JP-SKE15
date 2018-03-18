@@ -7,9 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Hayato Kawai
+ *
+ */
 public class Main extends Application {
 	
-	Counter counter = new Counter();
 	@Override
 	public void start(Stage stage) {
 		try {
@@ -17,8 +21,9 @@ public class Main extends Application {
 			Parent root = (Parent)FXMLLoader.load(getClass().getResource("GuessingGameUI.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
-			stage.setTitle("Converter");
+			stage.setTitle("Guessing-game");
 			stage.sizeToScene();
+			stage.setResizable(false);
 			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
